@@ -1,5 +1,6 @@
 version: 1
 deliverables:
-  m100-read-and-digest: {}
-  m200-splits: {}
-  m300-subsets: {}
+  m100-read-and-digets: {}
+  m200-splits:
+    splits_script: src/make_splits.py
+    counts: ../data/split_counts.csv
