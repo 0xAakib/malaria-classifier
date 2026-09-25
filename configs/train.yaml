@@ -1,0 +1,13 @@
+# Shared by every (method, dataset, fraction, seed) run.
+total_steps: 2000        # fixed optimizer-step budget at every label fraction
+batch_size: 32
+optimizer: adamw
+lr: 3.0e-4
+weight_decay: 0.05
+schedule: cosine
+warmup_steps: 100
+augmentation: [hflip, vflip, rotate90, color_jitter]
+methods: [dinov2, plasmovision, cnn, resnet18]
+datasets: [nih, bbbc041]
+fractions: [1.0, 0.25, 0.1, 0.02]
+seeds: [0, 1]

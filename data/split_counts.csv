@@ -1,0 +1,9 @@
+dataset,split,label,count
+nih,train,infected,11023
+nih,train,uninfected,11023
+nih,test,infected,2756
+nih,test,uninfected,2756
+bbbc041,train,infected,347
+bbbc041,train,uninfected,7371
+bbbc041,test,infected,87
+bbbc041,test,uninfected,1843

@@ -1,0 +1,9 @@
+method,dataset,sufficiency_fraction
+dinov2,nih,0.02
+plasmovision,nih,0.1
+cnn,nih,0.1
+resnet18,nih,0.1
+dinov2,bbbc041,0.25
+plasmovision,bbbc041,0.25
+cnn,bbbc041,1.0
+resnet18,bbbc041,0.25
