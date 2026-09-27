@@ -1,7 +1,6 @@
 """Fine-tune every method at every label fraction to a fixed optimizer-step budget.
 
-Training stops after exactly `total_steps` gradient updates, whatever the
-subset size: small subsets are simply cycled more often. Only the train subset
+Every run trains for the same number of epochs. Only the train subset
 is read; the test split is not loaded here at all.
 """
 import itertools
@@ -27,23 +26,24 @@ def train_one(method: str, dataset: str, fraction: float, seed: int, cfg: dict) 
     model = build_model(method, num_classes=2)
     loader = subset_loader(dataset, fraction, seed, batch_size=cfg["batch_size"], augment=cfg["augmentation"])
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"])
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=cfg["total_steps"])
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=cfg["epochs"] * len(loader))
     loss_fn = torch.nn.CrossEntropyLoss()
 
     model.train()
-    batches = itertools.cycle(loader)
-    for step in range(1, cfg["total_steps"] + 1):
-        images, labels = next(batches)
-        optimizer.zero_grad()
-        loss = loss_fn(model(images), labels)
-        loss.backward()
-        optimizer.step()
-        scheduler.step()
+    step = 0
+    for epoch in range(cfg["epochs"]):
+        for images, labels in loader:
+            optimizer.zero_grad()
+            loss = loss_fn(model(images), labels)
+            loss.backward()
+            optimizer.step()
+            scheduler.step()
+            step += 1
 
     torch.save(model.state_dict(), f"checkpoints/{method}_{dataset}_{fraction}_{seed}.pt")
     print(
         f"[train] method={method} dataset={dataset} fraction={fraction} seed={seed} "
-        f"train_examples={len(loader.dataset)} steps={step}/{cfg['total_steps']} done"
+        f"train_examples={len(loader.dataset)} epochs={cfg['epochs']} steps={step} done"
     )
 
 
