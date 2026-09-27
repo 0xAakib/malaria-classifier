@@ -17,3 +17,6 @@ Cells cut from the same slide would end up on both sides of the split. The model
 - [x] B. Whether ViTs are more label-efficient than CNNs in general
 - [ ] C. Nothing; every claim is valid
 
+## Q5. Give one result that would count as a publishable null result for this study.
+
+If all four label-efficiency curves were statistically indistinguishable once the step budget is matched, that would show a malaria-adjacent checkpoint does not need fewer labels than training from scratch, which is still a useful finding for a team choosing a backbone.
