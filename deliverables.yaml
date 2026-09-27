@@ -1,0 +1,5 @@
+version: 1
+deliverables:
+  m100-read-and-digets: {}
+  m200-splits:
+    counts: ../data/split_counts.csv
