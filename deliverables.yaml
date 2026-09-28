@@ -1,3 +1,5 @@
 version: 1
 deliverables:
-  m800-quiz: {}
+  m200-splits: {}
+  m300-subsets: {}
+  m800-curves-figure: {}
