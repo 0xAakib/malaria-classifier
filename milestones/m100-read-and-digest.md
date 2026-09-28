@@ -8,17 +8,15 @@ An epoch over the 2% subset is about fifty times shorter than an epoch over the 
 
 A model that answers "uninfected" for every cell would already score about 95% accuracy on BBBC041 while never finding a single infected cell. We use balanced accuracy, the average of the recall on each class, and MCC, which both drop to chance for a model that ignores the minority class.
 
-<!-- ## Q3. What would go wrong if the train/test split were made per cell instead of per source image?
+## Q3. What would go wrong if the train/test split were made per cell instead of per source image?
 
 Cells cut from the same slide would end up on both sides of the split. The model would then be tested on slides it has already seen during training, with the same staining and lighting, so the test scores would be inflated compared to a genuinely new slide.
 
--->
 ## Q4 (choose one). The four methods differ in architecture and pretraining at once. What can the results NOT claim?
-- [x] A. Which of these four specific models is most label-efficient
-- [ ] B. Whether ViTs are more label-efficient than CNNs in general
+- [ ] A. Which of these four specific models is most label-efficient
+- [x] B. Whether ViTs are more label-efficient than CNNs in general
 - [ ] C. Nothing; every claim is valid
 
-<!-- draft, not finished
 ## Q5. Give one result that would count as a publishable null result for this study.
 
 If all four label-efficiency curves were statistically indistinguishable once the step budget is matched, that would show a malaria-adjacent checkpoint does not need fewer labels than training from scratch, which is still a useful finding for a team choosing a backbone.
