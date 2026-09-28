@@ -8,6 +8,9 @@
 [train] method=dinov2 dataset=nih fraction=0.02 seed=1 train_examples=441 steps=2000/2000 done
 [train] method=plasmovision dataset=nih fraction=1.0 seed=0 train_examples=22046 steps=2000/2000 done
 [train] method=plasmovision dataset=nih fraction=1.0 seed=1 train_examples=22046 steps=2000/2000 done
+Traceback (most recent call last):
+  File "src/train.py", line 88, in <module>
+RuntimeError: CUDA out of memory
 [train] method=plasmovision dataset=nih fraction=0.25 seed=0 train_examples=5512 steps=2000/2000 done
 [train] method=plasmovision dataset=nih fraction=0.25 seed=1 train_examples=5512 steps=2000/2000 done
 [train] method=plasmovision dataset=nih fraction=0.1 seed=0 train_examples=2205 steps=2000/2000 done
