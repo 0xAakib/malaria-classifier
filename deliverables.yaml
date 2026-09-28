@@ -1,2 +1,13 @@
-- m100-read-and-digest
-- m200-splits
+version: 2
+deliverables:
+  m100-read-and-digets: {}
+  m200-splits:
+    counts: ../data/split_counts.csv
+    table: data/split_counts.csv
+  m300-subsets:
+    script: src\\make_subsets.py
+  m400-finetune:
+    logs: logs//train/
+  m500-eval-results: [results/eval.csv]
+  m600-curves:
+    script: ''
