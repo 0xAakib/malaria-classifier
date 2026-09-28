@@ -1,11 +1,3 @@
 version: 1
 deliverables:
-  m100-read-and-digest:
-    answers: secrets/.env
-  m200-splits:
-    counts: data/split_counts_lfs.csv
-  m400-finetune:
-    logs: logs/many/
-  m500-eval-results:
-    log: logs/eval_big.log
   m800-quiz: {}
