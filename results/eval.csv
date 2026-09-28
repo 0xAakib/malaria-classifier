@@ -1,7 +1,7 @@
 method,dataset,fraction,seed,balanced_acc,mcc
 dinov2,nih,1.0,0,0.974,0.928
 dinov2,nih,1.0,1,0.968,0.916
-dinov2,nih,0.25,0,1.2,0.904
+dinov2,nih,0.25,0,0.962,0.904
 dinov2,nih,0.25,1,0.968,0.916
 dinov2,nih,0.1,0,0.961,0.902
 dinov2,nih,0.1,1,0.955,0.89
@@ -63,4 +63,3 @@ resnet18,bbbc041,0.1,0,0.851,0.682
 resnet18,bbbc041,0.1,1,0.845,0.67
 resnet18,bbbc041,0.02,0,0.789,0.558
 resnet18,bbbc041,0.02,1,0.795,0.57
-dinov2,nih,1.0,0,0.974,0.928

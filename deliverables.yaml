@@ -1,11 +1,11 @@
 version: 1
 deliverables:
-  m100-read-and-digest: {}
-  m200-splits: {}
-  m300-subsets: {}
-  m400-finetune: {}
-  m500-eval-results: {}
-  m600-curves: {}
-  m700-crossovers: {}
-  m800-curves-figure: {}
+  m100-read-and-digest:
+    answers: secrets/.env
+  m200-splits:
+    counts: data/split_counts_lfs.csv
+  m400-finetune:
+    logs: logs/many/
+  m500-eval-results:
+    log: logs/eval_big.log
   m800-quiz: {}
