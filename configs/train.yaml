@@ -1,5 +1,5 @@
 # Shared by every (method, dataset, fraction, seed) run.
-epochs: 10               # same number of epochs at every label fraction
+total_steps: 2000        # fixed optimizer-step budget at every label fraction
 batch_size: 32
 optimizer: adamw
 lr: 3.0e-4

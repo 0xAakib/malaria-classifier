@@ -1,3 +1,5 @@
 version: 1
 deliverables:
-  m400-finetune: {}
+  m100-read-and-digest: {}
+  m200-splits: {}
+  m300-subsets: {}
