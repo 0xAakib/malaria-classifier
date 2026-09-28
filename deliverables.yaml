@@ -1,4 +1,2 @@
-version: 1
-deliverables:
-  m100-read-and-digest: {
-  m200-splits: {}
+- m100-read-and-digest
+- m200-splits
